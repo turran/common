@@ -6,8 +6,10 @@ gcov-reset:
 	@find . -name "*.gcov" | xargs rm -f {} \;
 	@find . -name "*.gcda" | xargs rm -f {} \;
 if ENS_HAVE_LCOV
-lcov-reset:
+lcov-clean:
 	@rm -rf coverage
+
+lcov-reset: lcov-clean
 	@find . -name "*.gcov" | xargs rm -f {} \;
 	@find . -name "*.gcda" | xargs rm -f {} \;
 	@lcov --directory . --zerocounters
@@ -21,8 +23,10 @@ lcov-report:
 	@mv coverage/coverage.cleaned.info coverage/coverage.info
 	@genhtml -t "$(PACKAGE_STRING)" -o coverage coverage/coverage.info
 
-CLEAN_LOCAL += coverage
 else
+lcov-clean:
+	@echo "Install lcov and reconfigure"
+
 lcov-reset:
 	@echo "Install lcov and reconfigure"
 
@@ -36,6 +40,9 @@ gcov:
 	@echo "reconfigure with --enable-coverage"
 
 gcov-reset:
+	@echo "reconfigure with --enable-coverage"
+
+lcov-clean:
 	@echo "reconfigure with --enable-coverage"
 
 lcov-reset:
