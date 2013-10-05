@@ -1,14 +1,15 @@
 if ENS_ENABLE_COVERAGE
 gcov:
-	@find . -name "*.gcda" | xargs gcov
+	@find . -name "*.gcda" | xargs -r gcov
 
 gcov-reset:
 	@find . -name "*.gcov" | xargs rm -f {} \;
 	@find . -name "*.gcda" | xargs rm -f {} \;
-
+if ENS_HAVE_LCOV
 lcov-reset:
 	@rm -rf coverage
-	@find . -name "*.gcda" -exec rm {} \;
+	@find . -name "*.gcov" | xargs rm -f {} \;
+	@find . -name "*.gcda" | xargs rm -f {} \;
 	@lcov --directory . --zerocounters
 
 lcov-report:
@@ -21,6 +22,14 @@ lcov-report:
 	@genhtml -t "$(PACKAGE_STRING)" -o coverage coverage/coverage.info
 
 CLEAN_LOCAL += coverage
+else
+lcov-reset:
+	@echo "Install lcov and reconfigure"
+
+lcov-report:
+	@echo "Install lcov and reconfigure"
+
+endif
 
 else
 gcov:
