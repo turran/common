@@ -1,14 +1,14 @@
 
-.PHONY: doc
+.PHONY: doxygen
 
 PACKAGE_DOCNAME = $(PACKAGE_TARNAME)-$(PACKAGE_VERSION)-doc
 
 if ENS_BUILD_DOC
 
-doc-clean:
+doxygen-clean:
 	rm -rf doc/html/ doc/latex/ doc/man/ doc/xml/ $(PACKAGE_DOCNAME).tar*
 
-doc: doc-clean
+doxygen: doxygen-clean
 	$(ens_doxygen) doc/Doxyfile
 	cp $(srcdir)/doc/img/* doc/html/
 	cp $(srcdir)/doc/img/* doc/latex/
@@ -21,9 +21,9 @@ doc: doc-clean
 
 else
 
-doc-clean:
+doxygen-clean:
 
-doc:
+doxygen:
 	@echo "Documentation not built. Run ./configure --help"
 
 endif
