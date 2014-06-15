@@ -197,6 +197,13 @@ TAB_SIZE               = 4
 
 ALIASES                =
 
+# Add the alias to inform ender about an inheration
+ALIASES                += inherits{1}="@xmlonly<inherits from=\"\1\"/>@endxmlonly inherits from @ref \1"
+# Add the include for ender
+ALIASES                += depends{1}="@xmlonly<depends from=\"\1\"/>@endxmlonly \1"
+# In order to list the groups of a header file
+ALIASES                += listgroup{1}="@xmlonly<ingroup>@endxmlonly @ref \1 @xmlonly</ingroup>@endxmlonly"
+
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding
 # "class=itcl::class" will allow you to use the command class in the
