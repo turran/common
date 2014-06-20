@@ -204,7 +204,7 @@ ALIASES                += depends{1}="@xmlonly<depends from=\"\1\"/>@endxmlonly 
 # In order to list the groups of a header file
 ALIASES                += listgroup{1}="@xmlonly<ingroup>@endxmlonly @ref \1 @xmlonly</ingroup>@endxmlonly"
 # To add object properties
-ALIASES                += prop{1}="@xmlonly<prop name=\"\1\"/>@endxmlonly \1"
+ALIASES                += prop{1}="@xmlonly<prop name=\"\1\"/>@endxmlonly"
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding
