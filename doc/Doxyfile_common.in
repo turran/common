@@ -205,6 +205,10 @@ ALIASES                += depends{1}="@xmlonly<depends from=\"\1\"/>@endxmlonly 
 ALIASES                += listgroup{1}="@xmlonly<ingroup>@endxmlonly @ref \1 @xmlonly</ingroup>@endxmlonly"
 # To add object properties
 ALIASES                += prop{1}="@xmlonly<prop name=\"\1\"/>@endxmlonly"
+# To make it a valueof attr/function
+ALIASES                += valueof="@xmlonly<valueof/>@endxmlonly"
+# To handle the transfer
+ALIASES                += transfer{1}="@xmlonly<transfer type=\"\1\"/>@endxmlonly"
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding
