@@ -209,6 +209,8 @@ ALIASES                += prop{1}="@xmlonly<prop name=\"\1\"/>@endxmlonly"
 ALIASES                += valueof="@xmlonly<valueof/>@endxmlonly"
 # To handle the transfer
 ALIASES                += transfer{1}="@xmlonly<transfer type=\"\1\"/>@endxmlonly"
+# For static types on return values, etc
+ALIASES                += ender_type{1}="@xmlonly<ender-type type=\"\1\"/>@endxmlonly"
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding
