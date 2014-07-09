@@ -211,6 +211,10 @@ ALIASES                += valueof="@xmlonly<valueof/>@endxmlonly"
 ALIASES                += transfer{1}="@xmlonly<transfer type=\"\1\"/>@endxmlonly"
 # For static types on return values, etc
 ALIASES                += ender_type{1}="@xmlonly<ender-type type=\"\1\"/>@endxmlonly"
+# Like list group but only generate the proto of the type, not the functions, methods, etc
+ALIASES                += ender_group_proto{1}="@xmlonly<ender-group-proto>@endxmlonly @ref \1 @xmlonly</ender-group-proto>@endxmlonly"
+# To make it a downcast prop
+ALIASES                += ender_prop_downcast="@xmlonly<ender-prop-downcast/>@endxmlonly"
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding
