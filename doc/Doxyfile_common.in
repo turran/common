@@ -198,17 +198,17 @@ TAB_SIZE               = 4
 ALIASES                =
 
 # Add the alias to inform ender about an inheration
-ALIASES                += inherits{1}="@xmlonly<inherits from=\"\1\"/>@endxmlonly inherits from @ref \1"
+ALIASES                += ender_inherits{1}="@xmlonly<ender-inherits from=\"\1\"/>@endxmlonly inherits from @ref \1"
 # Add the include for ender
-ALIASES                += depends{1}="@xmlonly<depends from=\"\1\"/>@endxmlonly \1"
+ALIASES                += ender_depends{1}="@xmlonly<ender-depends from=\"\1\"/>@endxmlonly \1"
 # In order to list the groups of a header file
-ALIASES                += listgroup{1}="@xmlonly<ingroup>@endxmlonly @ref \1 @xmlonly</ingroup>@endxmlonly"
+ALIASES                += ender_group{1}="@xmlonly<ender-group>@endxmlonly @ref \1 @xmlonly</ender-group>@endxmlonly"
 # To add object properties
-ALIASES                += prop{1}="@xmlonly<prop name=\"\1\"/>@endxmlonly"
+ALIASES                += ender_prop{1}="@xmlonly<ender-prop name=\"\1\"/>@endxmlonly"
 # To make it a valueof attr/function
-ALIASES                += valueof="@xmlonly<valueof/>@endxmlonly"
+ALIASES                += ender_valueof="@xmlonly<ender-valueof/>@endxmlonly"
 # To handle the transfer
-ALIASES                += transfer{1}="@xmlonly<transfer type=\"\1\"/>@endxmlonly"
+ALIASES                += ender_transfer{1}="@xmlonly<ender-transfer type=\"\1\"/>@endxmlonly transfer[\1]"
 # For static types on return values, etc
 ALIASES                += ender_type{1}="@xmlonly<ender-type type=\"\1\"/>@endxmlonly"
 # Like list group but only generate the proto of the type, not the functions, methods, etc
