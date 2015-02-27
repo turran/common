@@ -215,6 +215,8 @@ ALIASES                += ender_type{1}="@xmlonly<ender-type type=\"\1\"/>@endxm
 ALIASES                += ender_group_proto{1}="@xmlonly<ender-group-proto>@endxmlonly @ref \1 @xmlonly</ender-group-proto>@endxmlonly"
 # To make it a downcast prop
 ALIASES                += ender_prop_downcast="@xmlonly<ender-prop-downcast/>@endxmlonly"
+# To define a name of the item
+ALIASES                += ender_name{1}="@xmlonly<ender-name name=\"\1\"/>@endxmlonly"
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding
