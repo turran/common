@@ -10,8 +10,8 @@ doxygen-clean:
 
 doxygen: doxygen-clean
 	$(ens_doxygen) doc/Doxyfile
-	cp $(srcdir)/doc/img/* doc/html/
-	cp $(srcdir)/doc/img/* doc/latex/
+	cp $(srcdir)/doc/img/* doc/html/ || true
+	cp $(srcdir)/doc/img/* doc/latex/ || true
 	rm -rf $(PACKAGE_DOCNAME).tar*
 	mkdir -p $(PACKAGE_DOCNAME)/doc
 	cp -R doc/html/ doc/latex/ doc/man/ doc/xml $(PACKAGE_DOCNAME)/doc
