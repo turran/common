@@ -208,7 +208,7 @@ ALIASES                += ender_prop{1}="@xmlonly<ender-prop name=\"\1\"/>@endxm
 # To make it a valueof attr/function
 ALIASES                += ender_valueof="@xmlonly<ender-valueof/>@endxmlonly"
 # To handle the transfer
-ALIASES                += ender_transfer{1}="@xmlonly<ender-transfer type=\"\1\"/>@endxmlonly transfer[\1]"
+ALIASES                += ender_transfer{1}="@xmlonly<ender-transfer type=\"\1\"/>@endxmlonly [Transfer \1]"
 # For static types on return values, etc
 ALIASES                += ender_type{1}="@xmlonly<ender-type type=\"\1\"/>@endxmlonly"
 # Like list group but only generate the proto of the type, not the functions, methods, etc
@@ -217,6 +217,8 @@ ALIASES                += ender_group_proto{1}="@xmlonly<ender-group-proto>@endx
 ALIASES                += ender_prop_downcast="@xmlonly<ender-prop-downcast/>@endxmlonly"
 # To define a name of the item
 ALIASES                += ender_name{1}="@xmlonly<ender-name name=\"\1\"/>@endxmlonly"
+# To define an arg nullable
+ALIASES                += ender_nullable="@xmlonly<ender-nullable/>@endxmlonly [Nullable]"
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding
