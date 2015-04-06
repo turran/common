@@ -9,7 +9,7 @@ doxygen-clean:
 	rm -rf doc/html/ doc/latex/ doc/man/ doc/xml/ $(PACKAGE_DOCNAME).tar*
 
 doxygen: doxygen-clean
-	$(ens_doxygen) $(srcdir)/doc/Doxyfile
+	$(ens_doxygen) $(builddir)/doc/Doxyfile
 	cp $(srcdir)/doc/img/* doc/html/ || true
 	cp $(srcdir)/doc/img/* doc/latex/ || true
 	rm -rf $(PACKAGE_DOCNAME).tar*
