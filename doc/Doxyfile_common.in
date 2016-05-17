@@ -219,8 +219,10 @@ ALIASES                += ender_downcast="@xmlonly<ender-downcast/>@endxmlonly"
 ALIASES                += ender_name{1}="@xmlonly<ender-name name=\"\1\"/>@endxmlonly"
 # To define an arg nullable
 ALIASES                += ender_nullable="@xmlonly<ender-nullable/>@endxmlonly [Nullable]"
-# To define a callback arg as delayed
-ALIASES                += ender_delayed="@xmlonly<ender-delayed/>@endxmlonly [Delayed callback]"
+# To define an arg that is a closure
+ALIASES                += ender_closure="@xmlonly<ender-closure/>@endxmlonly [Closure]"
+# To define an arg that is a delayed callback
+ALIASES                += ender_delayed="@xmlonly<ender-delayed/>@endxmlonly [Delayed]"
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding
